@@ -10,6 +10,7 @@ Stylizing an image at a resolution of 852x480 approximately takes **1.40 seconds
   <img src='images/contents/4.jpg' height="225px">
   <img src='images/styles/4.jpg' height="225px">
   <img src='results/single/final_results/4_final.png' height="225px">
+  <br>
 </div>
 
 In this repo, we also provide the torch implementation of the Domain Transform (Recursive Filter) described in the paper:
@@ -121,14 +122,17 @@ ffmpeg -i [path to your final frames]/frame_%04d.png [path to your video output]
   <img src='results/single/final_results/5_final.png' height="185px">
   <br>
   <img src='images/contents/6.jpg' height='185px'>
-  <img src='images/styles/6.jpg' height='185px'>
+  <img src='images/styles/6.jpeg' height='185px'>
   <img src='results/single/final_results/6_final.png' height="185px">
+  <br>
   <img src='images/contents/7.jpg' height='185px'>
   <img src='images/styles/7.jpg' height='185px'>
   <img src='results/single/final_results/7_final.png' height="185px">
+  <br>
   <img src='images/contents/8.jpg' height='185px'>
   <img src='images/styles/8.jpg' height='185px'>
   <img src='results/single/final_results/8_final.png' height="185px">
+  <br>
   <img src='images/contents/9.jpg' height='185px'>
   <img src='images/styles/9.jpg' height='185px'>
   <img src='results/single/final_results/9_final.png' height="185px">
