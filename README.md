@@ -67,7 +67,8 @@ stylize example images:
 bash fast_photographic_style_transfer_single.sh
 
 ```
-## Running on new images
+### Running on new images
+
 Change the image paths in `fast_photographic_style_transfer_single.sh` allow you to use a trained 
 model to stylize new images:
 ```
@@ -88,7 +89,7 @@ th StyleFusion.lua \
   -output_image [path to your final output image]
 ```
 
-## Running on videos
+### Running on videos
 
 Change the video and frame paths in `fast_photographic_style_transfer_video.sh` allow you to use a trained 
 model to stylize a new video:
