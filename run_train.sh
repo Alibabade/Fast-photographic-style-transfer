@@ -6,7 +6,7 @@ cr=`echo $'\n.'`
 cr=${cr%.}
 
 echo '--specify the path of training dataset, style image and output ...'
-training_dataset=/media/james/alibaba1/FILES_OFFICE/Researches/Style-transfer/Fast-neural-style-transfer/dataset_h5/coco-dataset.h5
+training_dataset=[path to your dataset.h5]
 style_image=./images/styles/newyork_night5.jpg
 output=./models/pre-trained/newyork_night
 echo '--run training process for model...'
