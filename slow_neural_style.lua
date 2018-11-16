@@ -27,7 +27,7 @@ cmd:option('-style_target_type', 'gram', 'gram|mean')
 
 -- Options for content reconstruction
 cmd:option('-content_weights', '1.0')
-cmd:option('-content_layers', '16')
+cmd:option('-content_layers', '4,9,16')
 
 -- Options for style reconstruction
 cmd:option('-style_weights', '5.0')
