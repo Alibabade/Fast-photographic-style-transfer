@@ -61,17 +61,15 @@ The pre-trained models are located in './models/pre-trained/'
 
 ## Running examples
 
-The script `fast_photographic_style_transfer.sh` lets you use a trained model to 
+The script `fast_photographic_style_transfer_single.sh` lets you use a trained model to 
 stylize example images:
-
 ```bash```
-bash fast_photographic_style_transfer.sh
+bash fast_photographic_style_transfer_single.sh
 
 ```
 ## Running on new images
 Change the image paths in `fast_photographic_style_transfer_single.sh` allow you to use a trained 
 model to stylize new images:
-
 ```
 th fast_neural_style.lua \
   -model ./models/pre-trained/newyorknight.t7 \
