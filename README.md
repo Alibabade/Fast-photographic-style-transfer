@@ -168,4 +168,5 @@ If you think train a new model takes a long time, you could use **slow_neural_st
 ## License
 
 The example images are from Internet, I don't have the copyright. If you are the copyright owners and you think this has copyright conflicts, please contact me to delete the images.
-Free for personal or research use; for commercial use please contact me.
+
+This repo is free for personal or research use; for commercial use please contact me.
