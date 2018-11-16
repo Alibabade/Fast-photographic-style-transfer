@@ -63,15 +63,14 @@ The pre-trained models are located in './models/pre-trained/'
 
 The script `fast_photographic_style_transfer_single.sh` lets you use a trained model to 
 stylize example images:
-```bash```
+```bash
 bash fast_photographic_style_transfer_single.sh
 
 ```
 ### Running on new images
-
 Change the image paths in `fast_photographic_style_transfer_single.sh` allow you to use a trained 
 model to stylize new images:
-```
+```bash
 th fast_neural_style.lua \
   -model ./models/pre-trained/newyorknight.t7 \
   -image_size 700 \
@@ -90,11 +89,10 @@ th StyleFusion.lua \
 ```
 
 ### Running on videos
-
 Change the video and frame paths in `fast_photographic_style_transfer_video.sh` allow you to use a trained 
 model to stylize a new video:
 
-```
+```bash
 ffmpeg -i [path to your video] [path to your frames]/frame_%04d.ppm
 
 th fast_neural_style.lua \
@@ -119,7 +117,7 @@ ffmpeg -i [path to your final frames]/frame_%04d.png [path to your video output]
 ```
 
 
-## Some example results
+### Some example results
 
 
 <div align='center'>
