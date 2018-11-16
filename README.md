@@ -152,7 +152,7 @@ The full set of options for this script is [described here](doc/flags.md#fast_ne
 
 ## Training new models
 
-You can find instructions for training new models [here](doc/training.md).
+You can find instructions for training new models [here](doc/training.md). The training process takes around 2 hours on a single NVIDIA GTX 1080Ti card.
 
 The training example is described in **run_train.sh**.
 
@@ -160,6 +160,10 @@ The training example is described in **run_train.sh**.
 The code builds on
 [Perceptual Losses for Real-Time Style Transfer and Super-Resolution](http://cs.stanford.edu/people/jcjohns/eccv16/)
 by Justin Johnson, Alexandre Alahi, and Li Fei-Fei.
+
+## Slow Neural Style for Online Stylization in Arbitrary Styles
+
+If you think train a new model takes a long time, you could use **slow_neural_style.lua** to stylize images in arbitrary styles and use **StyleFusion.lua** to play as the post-processing step. The optimization process takes roughly 60-90 seconds for an image at resolution `width=512` on a single NVIDIA GTX 1080Ti card.
 
 ## License
 
