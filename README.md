@@ -1,14 +1,15 @@
 # Fast photographic style transfer
 
-This is the torch implementation code for the fast photographic style transfer based on Fast-Neural-Style(http://cs.stanford.edu/people/jcjohns/eccv16/)
+This is the torch implementation code for the fast photographic style transfer based on F
+ast-Neural-Style(http://cs.stanford.edu/people/jcjohns/eccv16/)
 
 
-Stylizing an image at a resolution of 852x480 approximately takes **40 milliseconds** on a single GTX 1080Ti Card:
+Stylizing an image at a resolution of 852x480 approximately takes **1.40 seconds** on a single GTX 1080Ti Card:
 
 <div align='center'>
-  <img src='images/contents/hongkong_night.jpg' height="225px">
-  <img src='images/styles/newyork_night.jpg' height="225px">
-  <img src='results/hongkong-2-newyork.png' height="225px">
+  <img src='images/contents/4.jpg' height="225px">
+  <img src='images/styles/4.jpg' height="225px">
+  <img src='results/4_final.png' height="225px">
 </div>
 
 In this repo, we also provide the torch implementation of the Domain Transform (Recursive Filter) described in the paper:
@@ -20,9 +21,10 @@ In this repo, we also provide the torch implementation of the Domain Transform (
 
 
 ## Setup
-All code is implemented in [Torch7](http://torch.ch/).
+All code is implemented in Ubuntu 16.04 with [Torch7](http://torch.ch/) and Lua5.1, thus some necessary 
+packages need to be updated or installed.
 
-First [install Torch](http://torch.ch/docs/getting-started.html#installing-torch), then
+First. [Install Torch](http://torch.ch/docs/getting-started.html#installing-torch), then
 update / install the following packages:
 
 ```bash
@@ -32,43 +34,33 @@ luarocks install image
 luarocks install lua-cjson
 ```
 
-### (Optional) GPU Acceleration
-
-If you have an NVIDIA GPU, you can accelerate all operations with CUDA.
-
-First [install CUDA](https://developer.nvidia.com/cuda-downloads), then
-update / install the following packages:
-
-```bash
+Second. [Install Cuda](https://developer.nvidia.com/cuda-zone), if you have an NVIDIA GPU and want to 
+accelerate all operations with CUDA. Then update / install the following packages:
+```bash 
 luarocks install cutorch
 luarocks install cunn
 ```
 
-### (Optional) cuDNN
-
-When using CUDA, you can use cuDNN to accelerate convolutions.
-
-First [download cuDNN](https://developer.nvidia.com/cudnn) and copy the
-libraries to `/usr/local/cuda/lib64/`. Then install the Torch bindings for cuDNN:
-
+Third. [Install cuDNN](https://developer.nvidia.com/cudnn) to accelerate your convolution operations when using CUDA.
+You can copy the cuDNN libraries to `/usr/local/cuda/lib64/`. Then install the Torch bindings for cuDNN:
 ```bash
 luarocks install cudnn
 ```
 
 ### Pretrained Models
-The pre-trained models are located in './models/pre-trained/'
+The pre-trained models are located in **./models/pre-trained/**
 
 
 ## Running examples
 
-The script `fast_photographic_style_transfer_single.sh` lets you use a trained model to 
+The script **fast_photographic_style_transfer_single.sh** lets you use a trained model to 
 stylize example images:
 ```bash
 bash fast_photographic_style_transfer_single.sh
 
 ```
 ### Running on new images
-Change the image paths in `fast_photographic_style_transfer_single.sh` allow you to use a trained 
+Change the image paths in **fast_photographic_style_transfer_single.sh** allow you to use a trained 
 model to stylize new images:
 ```bash
 th fast_neural_style.lua \
@@ -89,7 +81,7 @@ th StyleFusion.lua \
 ```
 
 ### Running on videos
-Change the video and frame paths in `fast_photographic_style_transfer_video.sh` allow you to use a trained 
+Change the video and frame paths in **fast_photographic_style_transfer_video.sh** allow you to use a trained 
 model to stylize a new video:
 
 ```bash
@@ -121,22 +113,22 @@ ffmpeg -i [path to your final frames]/frame_%04d.png [path to your video output]
 
 <div align='center'>
   <img src='images/contents/2.jpg' height="185px">
-  <img src='images/styles/luca-micheli.jpg' height="185px">
+  <img src='images/styles/2.jpg' height="185px">
   <img src='results/single/2_final.jpg' height="185px">
   <img src='images/contents/5.jpg' height='185px'>
-  <img src='images/styles/dawid-zawila.jpg' height='185px'>
+  <img src='images/styles/5.jpg' height='185px'>
   <img src='results/single/5_final.jpg' height="185px">
   <img src='images/contents/6.jpg' height='185px'>
-  <img src='images/styles/street_sunset.jpg' height='185px'>
+  <img src='images/styles/6.jpg' height='185px'>
   <img src='results/single/6_final.jpg' height="185px">
   <img src='images/contents/7.jpg' height='185px'>
-  <img src='images/styles/wade_meng.jpg' height='185px'>
+  <img src='images/styles/7.jpg' height='185px'>
   <img src='results/single/7_final.jpg' height="185px">
   <img src='images/contents/8.jpg' height='185px'>
-  <img src='images/styles/tokyo-sunset.jpg' height='185px'>
+  <img src='images/styles/8.jpg' height='185px'>
   <img src='results/single/8_final.jpg' height="185px">
   <img src='images/contents/9.jpg' height='185px'>
-  <img src='images/styles/girl-face2.jpg' height='185px'>
+  <img src='images/styles/9.jpg' height='185px'>
   <img src='results/single/9_final.jpg' height="185px">
 </div>
 
