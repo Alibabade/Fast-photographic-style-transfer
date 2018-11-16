@@ -63,8 +63,9 @@ bash fast_photographic_style_transfer_single.sh
 Change the image paths in **fast_photographic_style_transfer_single.sh** allow you to use a trained 
 model to stylize new images:
 ```bash
+#run fast neural style to stylize an image 
 th fast_neural_style.lua \
-  -model ./models/pre-trained/newyorknight.t7 \
+  -model ./models/pre-trained/newyork_night.t7 \
   -image_size 700 \
   -width 0 \
   -median_filter 3 \
@@ -72,7 +73,8 @@ th fast_neural_style.lua \
   -input_image [path to your content image] \
   -output_image [path to your temporal output image] \
   -gpu 0
-
+  
+#run post-processing step 
 th StyleFusion.lua \
   -Type single \
   -content_image [path to your content image] \
@@ -85,8 +87,10 @@ Change the video and frame paths in **fast_photographic_style_transfer_video.sh*
 model to stylize a new video:
 
 ```bash
+#extract frames from a video
 ffmpeg -i [path to your video] [path to your frames]/frame_%04d.ppm
 
+#run fast neural style to stylize frames
 th fast_neural_style.lua \
   -model ./models/pre-trained/newyork_night.t7 \
   -image_size 700 \
@@ -96,14 +100,15 @@ th fast_neural_style.lua \
   -input_dir [path to your frames]/frame_%04d.ppm \
   -output_dir [path to your tmp stylized frames] \
   -gpu 0
-
+  
+#run post-processing step 
 th StyleFusion.lua \
   -Type video \
   -input_pattern [path to your frames]/frame_%04d.ppm \
   -stylized_pattern [path to your tmp stylized frames]/frame_%04d.ppm \
   -output_pattern [path to your final frames]/frame_%04d.png
 
-
+#create a stylized video
 ffmpeg -i [path to your final frames]/frame_%04d.png [path to your video output]/stylized.mp4
 ```
 
@@ -135,7 +140,7 @@ ffmpeg -i [path to your final frames]/frame_%04d.png [path to your video output]
 
 
 
-## Parameters
+## Parameters for Fast-Neural-Style
 
 You can control the size of the output images using the `-image_size` flag.
 
@@ -149,7 +154,7 @@ The full set of options for this script is [described here](doc/flags.md#fast_ne
 
 You can find instructions for training new models [here](doc/training.md).
 
-The training example is described in 'run_train.sh'.
+The training example is described in **run_train.sh**.
 
 
 The code builds on
