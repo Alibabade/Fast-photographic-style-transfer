@@ -12,7 +12,7 @@ Stylizing an image at a resolution of 852x480 approximately takes **1.40 seconds
   <br>
 </div>
 
-In this repo, we also provide the torch implementation of the Domain Transform (Recursive Filter) described in the paper:
+In this repo, I also provide the torch implementation of the Domain Transform (Recursive Filter) described in the paper:
 
     Domain Transform for Edge-Aware Image and Video Processing
     Eduardo S. L. Gastal and Manuel M. Oliveira
