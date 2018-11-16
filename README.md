@@ -8,7 +8,7 @@ Stylizing an image at a resolution of 852x480 approximately takes **40 milliseco
 <div align='center'>
   <img src='images/contents/hongkong_night.jpg' height="225px">
   <img src='images/styles/newyork_night.jpg' height="225px">
-  <img src='results/hongkong-2-newyork.png' height="346px">
+  <img src='results/hongkong-2-newyork.png' height="225px">
 </div>
 
 In this repo, we also provide the torch implementation of the Domain Transform (Recursive Filter) described in the paper:
@@ -20,7 +20,7 @@ In this repo, we also provide the torch implementation of the Domain Transform (
 
 
 ## Setup
-All code is implemented in [Torch](http://torch.ch/).
+All code is implemented in [Torch7](http://torch.ch/).
 
 First [install Torch](http://torch.ch/docs/getting-started.html#installing-torch), then
 update / install the following packages:
@@ -105,7 +105,6 @@ th fast_neural_style.lua \
   -output_dir [path to your tmp stylized frames] \
   -gpu 0
 
-echo '--run Post-processing step...'
 th StyleFusion.lua \
   -Type video \
   -input_pattern [path to your frames]/frame_%04d.ppm \
@@ -155,7 +154,7 @@ The full set of options for this script is [described here](doc/flags.md#fast_ne
 
 ## Training new models
 
-You can [find instructions for training new models here](doc/training.md).
+You can find instructions for training new models [here](doc/training.md).
 
 The training example is described in 'run_train.sh'.
 
