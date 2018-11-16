@@ -117,7 +117,7 @@ ffmpeg -i [path to your final frames]/frame_%04d.png [path to your video output]
   <img src='results/single/final_results/5_final.png' height="155px">
   <br>
   <img src='images/contents/6.jpg' height='155px'>
-  <<img src='images/styles/6.jpeg' height='155px' width= '250px'>
+  <img src='images/styles/6.jpeg' height='155px' width= '250px'>
   <img src='results/single/final_results/6_final.png' height="155px">
   <br>
   <img src='images/contents/7.jpg' height='155px'>
