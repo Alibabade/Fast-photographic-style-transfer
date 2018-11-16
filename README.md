@@ -1,6 +1,6 @@
 # Fast photographic style transfer
 
-This is the torch implementation code for the fast photographic style transfer based on Fast-Neural-Style (http://cs.stanford.edu/people/jcjohns/eccv16/)
+This is the torch implementation code for a fast photographic style transfer method based on Fast-Neural-Style (http://cs.stanford.edu/people/jcjohns/eccv16/)
 
 
 Stylizing an image at a resolution of 852x480 approximately takes **1.40 seconds** on a single GTX 1080Ti Card:
