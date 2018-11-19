@@ -8,7 +8,7 @@ Stylizing an image at a resolution of 852x480 approximately takes **1.40 seconds
 <div align='center'>
   <img src='images/contents/4.jpg' height="225px">
   <img src='images/styles/4.jpg' height="225px">
-  <img src='results/single/final_results/4_final.png' height="325px">
+  <img src='results/single/final_results/4_final.png' height="425px">
   <br>
 </div>
 
